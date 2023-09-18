@@ -1,4 +1,4 @@
-# page for Team Fortress 2 Classic
+# page for Pre Fortress 2
 <h2> locations </h2>
 default files - TODO<br>
 guides - TODO<br>
