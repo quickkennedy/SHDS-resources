@@ -1,0 +1,431 @@
+// you found the easter egg !
+// here are *some* cut beta weapons that we won't ever revisit
+// good chance they may be broken in some way. use at your own caution!
+
+"items_game_cut_content"
+{
+	"prefabs"
+	{
+        "weapon_riot_shield"
+		{
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_class"				"tf_weapon_riot"
+			"item_type_name"			"#TF_Weapon_RiotShield"
+			"item_name"					"#TF_Weapon_RiotShield"
+			"item_slot"					"primary"
+			"anim_slot"					"melee"
+			"item_quality"				"normal"
+			"min_ilevel"				"1"
+			"max_ilevel"				"1"
+			"image_inventory"			"backpack/weapons/w_models/w_bat"
+			"model_world"				"models/weapons/w_models/w_bat.mdl"
+			"model_player"				"models/weapons/v_models/v_bat_scout.mdl"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"attach_to_hands"			"1"
+			"used_by_classes"
+			{
+				"heavy"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+    }
+    "items"
+    {
+        // Drudly, Foxysen item. Shelved for 2.2.0/2.3.0. Very WIP.
+        "20000"
+        {
+            "name"						"Throwing Knife"
+            "prefab"					"weapon_knife"
+            "item_class"				"tf_weapon_throwingknife"
+            "item_name"					"#TF_Weapon_ThrowingKnife"
+            "item_type_name"			"#TF_Weapon_ThrowingKnife_Type"
+            "item_description"			"#TF_Weapon_ThrowingKnife_Desc"
+            "show_in_armory"			"1"
+            "item_slot"					"primary"
+            "anim_slot"					"melee"
+            "item_logname"				"throwingknife"
+            "item_iconname"				"throwingknife"
+            "model_world"				"models/weapons/w_models/w_knife.mdl"
+            "model_player"				"models/weapons/v_models/v_knife_spy.mdl"
+            "attach_to_hands"			"2"			
+            "used_by_classes"
+            {
+                "spy"					"1"
+            }
+            "attributes"
+            {
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_dart.mdl"
+				}
+                "special taunt"
+                {
+                    "attribute_class"	"special_taunt"
+                    "value"				"1"
+                }
+                "allowed in medieval mode"
+                {
+                    "attribute_class"	"allowed_in_medieval_mode"
+                    "value"				"1"
+                }
+            }
+        }
+		// Foxysen item, cancelled and shelved until unknown time. very WIP. Change the focus off suicide.
+		"20001"
+		{
+			"name"						"Detonator"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_detonator"
+			"item_name"					"#TF_Weapon_Detonator"
+			"item_type_name"			"#TF_Weapon_Detonator_Type"
+			"item_description"			"#TF_Weapon_Detonator_Desc"
+			"item_slot"					"melee"
+			"attach_to_hands"			"2"
+			"item_logname"				"detonator"
+			"item_iconname"				"detonator"
+			"image_inventory"			"backpack/weapons/w_models/w_wrench"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"model_world"				"models/weapons/w_models/w_bottle.mdl" // We may not want to use it due to bad blood
+			"model_player"				"models/weapons/v_models/v_bottle_demoman.mdl" // We may not want to use it due to bad blood
+			"attach_to_hands"			"2"
+			"flip_viewmodel"			"1"
+			"used_by_classes"
+			{
+				"demoman"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"8 0 -6"
+			}
+			"attributes"
+			{
+				"explode on smack DISPLAY ONLY"
+				{
+					"attribute_class"	"DISPLAY ONLY"
+					"value"				"1"
+				}
+				"self mark for death on swing"
+				{
+					"attribute_class"	"add_onswing_addcond"
+					"value"				"137 1.25"
+				}
+				"crit mod disabled hidden"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+			}
+		}
+		// Trotim, Kay item. Shelved.
+		"20002"
+		{
+			"name"						"TF_WEAPON_RIOTSHIELD"
+			"prefab"					"weapon_riot_shield"
+			"show_in_armory"			"1"
+			"testing"					"0"
+			"item_description"			"#TF_Weapon_RiotShield_Desc"
+			"model_world"				"models/weapons/w_models/w_bat.mdl"
+			"model_player"				"models/weapons/v_models/v_bat_scout.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"1.5"
+				}
+				"HIDDEN primary ammo from ammo packs penalty"
+				{
+					"attribute_class"	"mult_primary_ammo_from_ammo_packs"
+					"value"				"0"
+				}
+				"HIDDEN primary ammo from dropped weapons penalty"
+				{
+					"attribute_class"	"mult_primary_ammo_from_dropped_weapons"
+					"value"				"0"
+				}
+				"no primary ammo from dispensers"
+				{
+					"attribute_class"	"no_primary_ammo_from_dispensers_always"
+					"value"		"1"
+				}
+				"shield bash aoe knockback"
+				{
+					"attribute_class"	"add_shield_bash_aoe_knockback"
+					"value"				"96"
+				}
+				"damage flat penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"-15"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+			}
+		}
+		// Hogyn item. Shelved. Maybe cancelled as he has no time?
+		"20003" // all the backpack healing attributes should work now !!! with this
+		{
+			"name"						"The Target Painter"
+			"item_class"                "tf_weapon_paintballrifle"
+			"item_logname"				"painter"
+			"item_iconname"				"painter"
+			"show_in_armory"			"1"
+			"testing"					"0"
+			"item_name"					"#TF_Weapon_PaintballGun"
+			"item_type_name"			"#TF_Weapon_PaintballGun_Type"
+			"item_description"			"#TF_Weapon_PaintballGun_Desc"
+			"item_slot"					"secondary"
+			"anim_slot"					"primary"
+			"image_inventory"			"backpack/weapons/w_models/w_bat"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"model_player"				"models/weapons/v_models/v_tranq_spy.mdl"
+			"model_world"				"models/weapons/w_models/w_tranq.mdl"
+
+			//"model_world"				"models/weapons/w_models/w_revrifle_sniper.mdl"
+			//"model_player"				"models/weapons/v_models/v_revrifle_sniper.mdl"
+
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"medic"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -9"
+			}
+			"attributes"
+			{
+				"apply heal on explosion"
+				{
+					"attribute_class"	"apply_heal_explosion"
+					"value"				"24"
+				}
+				"marked allies take more healing display only"
+				{
+					"attribute_class" 	"marked_ally_healbonus"
+					"value"				"0.5"
+				}
+				"outline target on hit"
+				{
+					"attribute_class"	"outline_on_hit"
+					"value"	"5"
+				}
+				"marked targets take extra healing"
+				{
+					"attribute_class"	"marked_target_bonusheal_duration"
+					"value"				"4.0"
+				}
+				"medigun charge is push buff"
+				{
+					"attribute_class"	"set_charge_type"
+					"value"				"2"
+				}
+				//"ubercharge rate bonus"
+				//{
+				//	"attribute_class"	"mult_medigun_uberchargerate"
+				//	"value"				"0.7"
+				//}
+				"Projectile speed increased hidden"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"1.45"
+				}
+				"soft zoom hidden"
+				{
+					"attribute_class"	"mod_sniper_soft_zoom"
+					"value"				"1"
+				}
+				"no scope hidden"
+				{
+					"attribute_class"	"mod_no_scope"
+					"value"				"1"
+				}
+				"punch angle is constant"
+				{
+					"attribute_class"	"punch_angle_is_constant"
+					"value"				"1"
+				}
+				"scoped firerate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay_scoped"
+					"value"				"1.15"
+				}
+				
+				// Fire bullets when scoped.
+				"override projectile type scoped"
+				{
+					"attribute_class"	"override_projectile_type_zoomed"
+					"value"				"1"
+				}
+				// Use 10^3 cube hull for sweep 
+				"bullet is a hull"
+				{
+					"attribute_class"	"bullet_is_a_hull"
+					"value"				"10.0"
+				}
+				
+				"hitscan hits allies"
+				{
+					"attribute_class"	"hitscan_hits_allies"
+					"value"				"1"
+				}
+				// Hit other hulls
+				"custom bullet impact collision mode"
+				{
+					"attribute_class"	"mod_bullet_impact_collision_mode"
+					"value"				"2"
+				}
+				
+				"no ammo hidden" 
+				{
+					"attribute_class"	"energy_weapon_no_ammo"
+					"value"				"1"
+				}
+				
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"-25"
+				}
+			}	
+			"visuals"
+         	{
+          	      "sound_single_shot"        	"PaintballGun.Shoot"
+          	      "sound_burst"            		"PaintballGun.ShootCrit"
+           	}		
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		"20004" // hi!!! its me !!! i made this -azzy
+		{
+		// UNIQUE TAUNT?
+			"name"						"M79 Grenade Launcher"
+			"prefab"					"weapon_grenade_launcher"
+			"item_class"				"tf_weapon_brimstonelauncher" 
+            "show_in_armory"			"1"
+			"testing"					"1"
+			"item_name"					"The Ol' Brimstone"
+			"item_type_name"			"Pump-Action Grenade Launcher"
+			"item_description"			"
+A wee lad in a mask was in a mighty hurry and left this pretty bloody thing behind.
+T'is me lucky day!"
+			"item_slot"					"primary"
+			"item_logname"				"m79"
+			"item_iconname"				"m79"
+			"image_inventory"			"backpack/weapons/w_models/w_grenadelauncher"
+			"attach_to_hands"			"1"
+			"used_by_classes"
+			{
+				"demoman"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"8 0 -6"
+				"mod brimstone slamfire damage required"	"-50"
+			//	"grenade no spin"				"1"
+			}
+			"attributes" // TODO prettify
+			{
+				"brimstone DISPLAY ONLY 1"
+				{
+					"attribute_class"	"brimstone_display_1"
+					"value"				"1"
+				}
+				"brimstone DISPLAY ONLY 2"
+				{
+					"attribute_class"	"brimstone_display_1"
+					"value"				"2"
+				}
+				"sticky air burst mode"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"				"2"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.9"
+				}
+				//"custom projectile model"
+				//{
+				//	"attribute_class"	"custom_projectile_model"
+				//	"value"				"models/weapons/w_models/w_grenade_grenadelauncher_dm.mdl"
+				//}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_GrenadeLauncher.Single"
+				"sound_burst"			"Weapon_GrenadeLauncher.SingleCrit"
+				"sound_reload"			"Weapon_GrenadeLauncher.DrumLoad"
+				"sound_special2"		"Weapon_GrenadeLauncher.Single"
+				"sound_special3"		"Weapon_GrenadeLauncher.SingleCrit"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+    }
+    "attributes"
+    {
+        "10000"
+		{
+			"name"					"brimstone DISPLAY ONLY 1"
+			"attribute_class"		"brimstone_display_1"
+			"description_string"	"Dealing damage fills charge meter"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"neutral"
+		}
+		"10001"
+		{
+			"name"					"brimstone DISPLAY ONLY 2"
+			"attribute_class"		"brimstone_display_2"
+			"description_string"	"Press the Use key when fully charged 
+to activate Slam Fire for 6 seconds
+In Slam Fire: +25% fire rate and infinite clip"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"positive"
+		}
+		"10002"
+		{
+			"name"					"mod brimstone slamfire damage required"
+			"attribute_class"		"mod_brimstone_slamfire_damagerequired"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"positive"
+		}
+		"10003"
+		{
+			"name"					"mult brimstone slamfire postfiredelay"
+			"attribute_class"		"mult_brimstone_slamfire_postfiredelay"
+			"description_format"	"value_is_percentage"
+			"hidden"				"0"
+			"effect_type"			"positive"
+		}
+		"10004"
+		{
+			"name"					"mult brimstone slamfire duration"
+			"attribute_class"		"mult_brimstone_slamfire_duration"
+			"description_format"	"value_is_percentage"
+			"hidden"				"0"
+			"effect_type"			"positive"
+		}
+    }
+}

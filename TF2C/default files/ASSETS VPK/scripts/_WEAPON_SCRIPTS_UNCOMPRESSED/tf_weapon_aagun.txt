@@ -1,0 +1,117 @@
+WeaponData
+{
+	// Attributes Base.
+	"printname"		"#TF_Weapon_AAGun"
+	"BuiltRightHanded"	"0"
+	"weight"		"3"
+	"WeaponType"		"primary"
+	"ITEM_FLAG_NOITEMPICKUP" 	"1"
+		
+	// Attributes TF.
+	//"Damage"			"52"
+	"Damage"			"58"
+	//"DamageRadius"		"146"
+	"DamageRadius"		"90"
+	"Range"				"900"
+	"BulletsPerShot"	"1"
+	"Spread"			"0.0"
+	"PunchAngle"		"2.0"
+	//"TimeFireDelay"		"0.6"
+	"TimeFireDelay"		"0.55"
+	"ProjectileType"	"projectile_bullet"
+
+	// Ammo & Clip.
+	"primary_ammo"		"TF_AMMO_PRIMARY"
+	"secondary_ammo"	"None"
+	"clip_size"		"-1"
+	"MaxAmmo"		"40"
+	"SpawnAmmo"		"40"
+
+	// Buckets.
+	"bucket"		"0"
+	"bucket_position"	"0"
+
+	// Models.
+	"viewmodel"		"models/weapons/v_models/v_browning.mdl"
+	"playermodel"	"models/weapons/c_models/c_browning/c_browning.mdl"
+	
+	// Tracer.
+	"TracerEffect"		"aagun_tracer_PARENT"
+	"TracerFreq"		"1"
+	
+	// Brass shell.
+	"BrassModel"		"models/weapons/shells/shell_aagun.mdl"
+
+	// Explosions.
+	"ExplosionEffect"		"explosion_shrapnel_wall_PARENT"
+	"ExplosionPlayerEffect"		"explosion_shrapnel_PARENT"
+	"ExplosionWaterEffect"		"explosion_shrapnel_underwater_PARENT"
+	
+	"HasCritExplosions"		"1"
+
+	"ExplosionSound"	"Weapon_Grenade_Mirv.Explode"
+	
+	// Muzzleflash
+	// REPLACE ME
+	"MuzzleFlashParticleEffect"	"muzzle_aagun_PARENT"
+	"MuzzleflashModelScale"		".001"
+	"NoMuzzleLight"				"1"
+	
+	// Sounds.
+	// Max of 16 per category (ie. max 16 "single_shot" sounds).
+	SoundData
+	{
+		"reload"		"Weapon_AAGun.Spin"	// That's right, a hack
+		"empty"			"Weapon_AAGun.ClipEmpty"	
+		"single_shot"	"Weapon_AAGun.Fire"
+		"special1"		"BaseExplosionEffect.Sound"
+		"special2"		"Weapon_AAGun.WindUp"
+		"special3"		"Weapon_AAGun.WindDown"
+		"burst"			"Weapon_AAGun.FireCrit"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"sprites/bucket_minigun"
+				"x"		"0"
+				"y"		"0"
+				"width"		"200"
+				"height"		"128"
+		}
+		"weapon_s"
+		{	
+				"file"		"sprites/bucket_minigun"
+				"x"		"0"
+				"y"		"0"
+				"width"		"200"
+				"height"		"128"
+		}
+		"ammo"
+		{
+				"file"		"sprites/a_icons1"
+				"x"			"55"
+				"y"			"60"
+				"width"		"73"
+				"height"	"15"
+		}
+		"crosshair"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"64"
+				"y"			"0"
+				"width"		"32"
+				"height"	"32"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"		"0"
+				"y"		"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+}

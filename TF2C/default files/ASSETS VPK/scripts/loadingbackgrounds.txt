@@ -1,0 +1,18 @@
+"Images"
+{
+	"normal"
+	{
+		"file"	"../console/background04"
+		"file"	"../console/background05"
+		"file"	"../console/background06"
+		"file"	"../console/background07"
+	}
+	
+	"widescreen"
+	{
+		"file"	"../console/background04_widescreen"
+		"file"	"../console/background05_widescreen"
+		"file"	"../console/background06_widescreen"
+		"file"	"../console/background07_widescreen"
+	}
+}
