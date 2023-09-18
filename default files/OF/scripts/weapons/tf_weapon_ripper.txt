@@ -1,0 +1,137 @@
+WeaponData
+{
+	// Attributes Base.
+	"printname"		"#TF_Weapon_SawLauncher"
+	"BuiltRightHanded"	"0"
+	"weight"		"3"
+	"WeaponType"		"primary"
+	"ITEM_FLAG_NOITEMPICKUP" 	"1"
+	
+	// Attributes TF
+	"Damage"			"10"
+	"InstagibDamage"	"999"
+	"Range"		"0"
+	"DamageRadius"		"0"
+	"BulletsPerShot"	"1"
+	"Spread"			"0.0"
+	"PunchAngle"		"3.0"
+	"TimeFireDelay"		"0.4"
+	"TimeIdle"		"0.8"
+	"TimeIdleEmpty"		"0.8"
+	"TimeReload"		"1.25"
+	"PickupMultiplier"	"0"
+	"AlwaysDrop"		"1"
+	"AppearOnBack"		"1"
+	"DropOnNoAmmo"		"1"
+				
+	// Projectile Related
+	"ProjectileType"	"projectile_sawblade"
+	"ProjectileSpeed"	"1500"
+
+	// Clip and Ammo
+	"primary_ammo"		"WEAPON_AMMO"
+	"clip_size"		"1"
+	"MaxAmmo"		"10"
+	
+	// Slot Placement [3-wep/TF2]	
+	"bucket"		"0"
+	"bucket_position"		"0"
+	
+	// Slot Placement [DM]
+	"bucket_dm"		"7"
+	"bucket_dm_position"	"3"
+
+	// Explosion Effects
+	"ExplosionEffect"		"ExplosionCore_wall"
+	"ExplosionPlayerEffect"		"ExplosionCore_MidAir"
+	"ExplosionWaterEffect"		"ExplosionCore_MidAir_underwater"
+	"ExplosionSound"	"BaseExplosionEffect.Sound"
+	
+	// Model & Animation
+	"viewmodel"		"models/weapons/v_models/v_saw_ballista.mdl"
+	"playermodel"		"models/weapons/w_models/w_saw_ballista.mdl"
+	"anim_prefix"		"gl"
+	"HasTeamSkins_Viewmodel""1"
+	"HasTeamSkins_Worldmodel""1"
+	
+	// Centered Viewmodel Offsets
+	"CenteredViewmodelAngle_X"		"0"
+	"CenteredViewmodelAngle_Y"		"0"
+	"CenteredViewmodelAngle_Z"		"5"
+	"CenteredViewmodelOffset_X"		"-3"
+	"CenteredViewmodelOffset_Y"		"-11.5"
+	"CenteredViewmodelOffset_Z"		"-2"
+	
+	// Mini-Viewmodel Offsets
+	"MinViewmodelOffset_X"		"10"
+	"MinViewmodelOffset_Y"		"3"
+	"MinViewmodelOffset_Z"		"-10"
+	
+	// Centered-Mini Viewmodel Offsets
+	"MiniCenteredViewmodelAngle_Z"		"5"
+	"MiniCenteredViewmodelOffset_X"		"2"
+	"MiniCenteredViewmodelOffset_Y"		"-11.55"
+	"MiniCenteredViewmodelOffset_Z"		"-12"
+
+	// Sounds.
+	// Max of 16 per category (ie. max 16 "single_shot" sounds).
+	SoundData
+	{
+		"single_shot"	"Weapon_SawBallista.Single"
+		//"reload"		"Weapon_RPG.WorldReload"
+		"burst"	"Weapon_SawBallista.SingleCrit"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+			"file"		"sprites/bucket_saw_ballista"
+			"x"		"0"
+			"y"		"0"
+			"width"		"200"
+			"height"		"128"
+		}
+		"weapon_s"
+		{	
+			"file"		"sprites/bucket_saw_ballista"
+			"x"		"0"
+			"y"		"0"
+			"width"		"200"
+			"height"		"128"
+		}
+		"weapon_t"
+		{	
+			"file"		"sprites/bucket_saw_ballista"
+			"x"		"0"
+			"y"		"0"
+			"width"		"200"
+			"height"		"128"
+		}
+		"ammo"
+		{
+			"file"		"sprites/a_icons1"
+			"x"		"55"
+			"y"		"60"
+			"width"		"73"
+			"height"	"15"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"		"32"
+			"y"		"32"
+			"width"		"32"
+			"height"	"32"
+		}
+		"autoaim"
+		{
+			"file"		"sprites/crosshairs"
+			"x"		"0"
+			"y"		"48"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+}
